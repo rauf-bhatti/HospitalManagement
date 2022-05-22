@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HospitalManagement.Views;
 
 namespace HospitalManagement
 {
@@ -23,6 +24,13 @@ namespace HospitalManagement
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Btn_Login_Click(object sender, RoutedEventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            this.Hide();
+            dashboard.ShowDialog();
         }
     }
 }
