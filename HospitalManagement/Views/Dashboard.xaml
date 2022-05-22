@@ -22,6 +22,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15"/>
             <ColumnDefinition Width="*"/>
+
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -41,53 +42,20 @@
             <Button
                 Content="Manage Patients"
                 FontFamily="Bahnschrift SemiBold SemiCondensed"
-                Height="60"
-                FontSize="30"
-                Width="350"
+                Height="50"
+                FontSize="20"
+                Width="250"
                 Margin="0, 25, 0, 0"
                 Background="FloralWhite"
                 BorderBrush="Black"
                 BorderThickness="2"/>
 
             <Button
-                Content="Manage Doctors"
+                Content="Manage Patients"
                 FontFamily="Bahnschrift SemiBold SemiCondensed"
-                Height="60"
-                FontSize="30"
-                Width="350"
-                Margin="0, 25, 0, 0"
-                Background="FloralWhite"
-                BorderBrush="Black"
-                BorderThickness="2"/>
-
-            <Button
-                Content="Manage Staff"
-                FontFamily="Bahnschrift SemiBold SemiCondensed"
-                Height="60"
-                FontSize="30"
-                Width="350"
-                Margin="0, 25, 0, 0"
-                Background="FloralWhite"
-                BorderBrush="Black"
-                BorderThickness="2"/>
-
-            <Button
-                Content="HRMS Dashboard"
-                FontFamily="Bahnschrift SemiBold SemiCondensed"
-                Height="60"
-                FontSize="30"
-                Width="350"
-                Margin="0, 25, 0, 0"
-                Background="FloralWhite"
-                BorderBrush="Black"
-                BorderThickness="2"/>
-
-            <Button
-                Content="Inventory Dashboard"
-                FontFamily="Bahnschrift SemiBold SemiCondensed"
-                Height="60"
-                FontSize="30"
-                Width="350"
+                Height="50"
+                FontSize="20"
+                Width="250"
                 Margin="0, 25, 0, 0"
                 Background="FloralWhite"
                 BorderBrush="Black"
@@ -107,28 +75,28 @@
                 Margin="40, 0, 0, 0"/>
         </StackPanel>
 
+        
+        
         <Grid 
                 Grid.Row="2"
                 Grid.Column="3" 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
-                Height="200"
-                Width="300"
                 Background="GhostWhite">
 
 
             <Border 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
-                Height="180"
-                Width="280"
+                Height="150"
+                Width="250"
                 Background="White"
                 CornerRadius="20"
                 BorderThickness="3"
                 BorderBrush="LightSteelBlue">
                 <StackPanel>
-                    <Label Content="Registered Doctors" FontSize="20" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" FontWeight="Bold" Margin="0,10,0,0"/>
-                    <Label Content="50" FontSize="40" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" VerticalAlignment="Center" Foreground="Green" Margin="0, 20, 0, 0"/>
+                    <Label Content="Registered Doctors" FontSize="18" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <Label Content="50" FontSize="30" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" VerticalAlignment="Center" Foreground="Green" Margin="0, 20, 0, 0"/>
                 </StackPanel>
             </Border>
         </Grid>
@@ -138,23 +106,21 @@
                 Grid.Column="5" 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
-                Height="200"
-                Width="300"
                 Background="GhostWhite">
 
 
             <Border 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
-                Height="180"
-                Width="280"
+                Height="150"
+                Width="250"
                 Background="White"
                 CornerRadius="20"
                 BorderThickness="3"
                 BorderBrush="LightSteelBlue">
                 <StackPanel>
-                    <Label Content="Registered Doctors" FontSize="20" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" FontWeight="Bold" Margin="0,10,0,0"/>
-                    <Label Content="50" FontSize="40" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" VerticalAlignment="Center" Foreground="Green" Margin="0, 20, 0, 0"/>
+                    <Label Content="Registered Doctors" FontSize="18" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <Label Content="50" FontSize="30" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" VerticalAlignment="Center" Foreground="Green" Margin="0, 20, 0, 0"/>
                 </StackPanel>
             </Border>
         </Grid>
@@ -164,23 +130,23 @@
                 Grid.Column="3" 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
-                Height="200"
-                Width="300"
+                Height="150"
+                Width="250"
                 Background="GhostWhite">
 
 
             <Border 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
-                Height="180"
-                Width="280"
+                Height="150"
+                Width="250"
                 Background="White"
                 CornerRadius="20"
                 BorderThickness="3"
                 BorderBrush="LightSteelBlue">
                 <StackPanel>
-                    <Label Content="Registered Doctors" FontSize="20" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" FontWeight="Bold" Margin="0,10,0,0"/>
-                    <Label Content="50" FontSize="40" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" VerticalAlignment="Center" Foreground="Green" Margin="0, 20, 0, 0"/>
+                    <Label Content="Registered Doctors" FontSize="18" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <Label Content="50" FontSize="30" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" VerticalAlignment="Center" Foreground="Green" Margin="0, 20, 0, 0"/>
                 </StackPanel>
             </Border>
         </Grid>
@@ -190,25 +156,31 @@
                 Grid.Column="5" 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
-                Height="200"
-                Width="300"
+                Height="150"
+                Width="250"
                 Background="GhostWhite">
 
 
             <Border 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
-                Height="180"
-                Width="280"
+                Height="150"
+                Width="250"
                 Background="White"
                 CornerRadius="20"
                 BorderThickness="3"
                 BorderBrush="LightSteelBlue">
                 <StackPanel>
-                    <Label Content="Registered Doctors" FontSize="20" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" FontWeight="Bold" Margin="0,10,0,0"/>
-                    <Label Content="50" FontSize="40" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" VerticalAlignment="Center" Foreground="Green" Margin="0, 20, 0, 0"/>
+                    <Label Content="Registered Doctors" FontSize="18" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <Label Content="50" FontSize="30" HorizontalAlignment="Center" FontFamily="Arial" FontStyle="Normal" VerticalAlignment="Center" Foreground="Green" Margin="0, 20, 0, 0"/>
                 </StackPanel>
             </Border>
         </Grid>
+        
+        
+        
+        
+        
+    
     </Grid>
 </Window>
