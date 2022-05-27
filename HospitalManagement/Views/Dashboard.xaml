@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HospitalManagement.Views"
         mc:Ignorable="d"
-        Title="Dashboard" Height="800" Width="1200">
+        Title="Dashboard" Height="700" Width="1200">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -40,6 +40,7 @@
             Background="SlateGray">
 
             <Button
+                x:Name="btn_MngPatients"
                 Content="Manage Patients"
                 FontFamily="Bahnschrift SemiBold SemiCondensed"
                 Height="50"
@@ -48,7 +49,8 @@
                 Margin="0, 25, 0, 0"
                 Background="FloralWhite"
                 BorderBrush="Black"
-                BorderThickness="2"/>
+                BorderThickness="2"
+                Click="btn_MngPatients_Click"/>
 
             <Button
                 Content="Manage Patients"
@@ -176,11 +178,5 @@
                 </StackPanel>
             </Border>
         </Grid>
-        
-        
-        
-        
-        
-    
     </Grid>
 </Window>

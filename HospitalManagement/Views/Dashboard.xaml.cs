@@ -23,5 +23,11 @@ namespace HospitalManagement.Views
         {
             InitializeComponent();
         }
+
+        private void btn_MngPatients_Click(object sender, RoutedEventArgs e)
+        {
+            PatientViews.PatientManagement ptnManagement = new PatientViews.PatientManagement();
+            ptnManagement.ShowDialog();
+        }
     }
 }
