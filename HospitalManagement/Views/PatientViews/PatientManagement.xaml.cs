@@ -22,30 +22,6 @@ namespace HospitalManagement.Views.PatientViews
         public PatientManagement()
         {
             InitializeComponent();
-            TestingSomething();
         }
-
-        private void TestingSomething()
-        {
-            List<Test> testList = new List<Test>();
-
-            for (int i = 0; i < 10; i++)
-                testList.Add(new Test());
-
-            this.listView_Main.ItemsSource = testList;
-        }
-
-
-    }
-
-    public class Test
-    {
-        public Test()
-        {
-            this.Name = "Helo";
-            this.Name2 = "asddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd";
-        }
-        public string Name { get; set; }
-        public string Name2 { get; set; }
     }
 }

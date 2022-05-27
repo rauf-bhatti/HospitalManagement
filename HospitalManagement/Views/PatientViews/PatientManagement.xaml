@@ -64,11 +64,11 @@
             <ListView.View>
                 <GridView 
                     AllowsColumnReorder="False">
-                    <GridViewColumn Header = "ID Number" DisplayMemberBinding = "{Binding Name}" Width = "150"/>
-                    <GridViewColumn Header = "First Name" DisplayMemberBinding = "{Binding Name}" Width = "150"/>
-                    <GridViewColumn Header = "Last Name" DisplayMemberBinding = "{Binding Name}" Width = "150"/>
-                    <GridViewColumn Header = "Age" DisplayMemberBinding = "{Binding Name}" Width = "150"/>
-                    <GridViewColumn Header = "Address" DisplayMemberBinding = "{Binding Name2}" Width = "150"/>
+                    <GridViewColumn Header = "ID Number" DisplayMemberBinding = "{Binding ID_Number}" Width = "150"/>
+                    <GridViewColumn Header = "First Name" DisplayMemberBinding = "{Binding FirstName}" Width = "150"/>
+                    <GridViewColumn Header = "Last Name" DisplayMemberBinding = "{Binding LastName}" Width = "150"/>
+                    <GridViewColumn Header = "Age" DisplayMemberBinding = "{Binding Age}" Width = "150"/>
+                    <GridViewColumn Header = "Address" DisplayMemberBinding = "{Binding Address}" Width = "150"/>
                 </GridView>
             </ListView.View>
         </ListView>
