@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hosp_management_v0._1.Models
+namespace HospitalManagement.Models
 {
     class Staff : Person
     {
