@@ -8,6 +8,7 @@ namespace HospitalManagement.Models
 {
     class Patient : Person
     {
+        public List<PatientHistory> patientHistory = new List<PatientHistory>();
 
         public Patient(string ID_Number, string FirstName, string LastName, int Age, string Address)
             : base(ID_Number, FirstName, LastName, Age, Address)
