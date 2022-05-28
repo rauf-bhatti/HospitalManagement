@@ -23,5 +23,11 @@ namespace HospitalManagement.Views.PatientViews
         {
             InitializeComponent();
         }
+
+        private void Btn_AddPatient_Click(object sender, RoutedEventArgs e)
+        {
+            PatientEntry PatientEntryForm = new PatientEntry();
+            PatientEntryForm.ShowDialog();
+        }
     }
 }

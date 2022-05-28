@@ -49,7 +49,16 @@
             Grid.RowSpan="5">
 
             <StackPanel>
-
+                <Button
+                    x:Name="Btn_AddPatient"
+                    Margin="0, 50, 0, 0"
+                    Width="100"
+                    Background="SlateGray"
+                    BorderBrush="Black"
+                    BorderThickness="1"
+                    Click="Btn_AddPatient_Click">
+                    <Image Source="/assets/login-logo.png" Width="50" Height="80"/>
+                </Button>
             </StackPanel>
         </Border>
 
