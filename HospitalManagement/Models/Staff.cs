@@ -11,7 +11,7 @@ namespace HospitalManagement.Models
         
         string Designation { get; set; }
 
-        public Staff(string ID_Number, string FirstName, string LastName, int Age, string Address, string Designation)
+        public Staff(int ID_Number, string FirstName, string LastName, int Age, string Address, string Designation)
             : base(ID_Number, FirstName, LastName, Age, Address)
         {
             this.Designation = Designation;
