@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using HospitalManagement.Controllers;
 
 namespace HospitalManagement.Views.PatientViews
 {
@@ -19,9 +20,17 @@ namespace HospitalManagement.Views.PatientViews
     /// </summary>
     public partial class PatientManagement : Window
     {
+        private PatientController controller = new PatientController();
+
         public PatientManagement()
         {
             InitializeComponent();
+            BindData();
+        }
+
+        private void BindData()
+        {
+            this.listView_Main.ItemsSource = controller.GetAllPatients();
         }
 
         private void Btn_AddPatient_Click(object sender, RoutedEventArgs e)
