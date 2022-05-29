@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\DoctorViews\" />
     <Folder Include="Views\InventoryViews\" />
     <Folder Include="Views\StaffViews\" />
   </ItemGroup>
