@@ -19,19 +19,16 @@ namespace HospitalManagement.Controllers
         private string QueryizeInsert(Patient newPatient)
         {
             return $"INSERT INTO Patient(FirstName, LastName, Age, Address) VALUES('{newPatient.FirstName}', '{newPatient.LastName}', {newPatient.Age}, '{newPatient.Address}');";
-
         }
 
         private string QueryizeModify(Patient newPatient)
         {
             return $"UPDATE Patient SET FirstName ='{newPatient.FirstName}', LastName = '{newPatient.LastName}', Age = {newPatient.Age}, Address = '{newPatient.Address}' WHERE ID_Number = {newPatient.ID_Number};";
-
         }
 
         private string QueryizeDelete(Patient newPatient)
         {
             return $"DELETE FROM Patient WHERE ID_Number = {newPatient.ID_Number};";
-
         }
 
         public List<Patient> GetAllPatients()

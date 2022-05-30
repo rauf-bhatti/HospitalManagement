@@ -53,7 +53,8 @@
                 Click="btn_MngPatients_Click"/>
 
             <Button
-                Content="Manage Patients"
+                x:Name="Btn_ManageInventory"
+                Content="Manage Inventory"
                 FontFamily="Bahnschrift SemiBold SemiCondensed"
                 Height="50"
                 FontSize="20"
@@ -61,7 +62,8 @@
                 Margin="0, 25, 0, 0"
                 Background="FloralWhite"
                 BorderBrush="Black"
-                BorderThickness="2"/>
+                BorderThickness="2"
+                Click="Btn_ManageInventory_Click"/>
         </StackPanel>
 
         <StackPanel

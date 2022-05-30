@@ -20,11 +20,17 @@ namespace HospitalManagement.Controllers
             return $"INSERT INTO Inventory_Table (ProductName, Quantity, Category) VALUES ('{inventory.ProductName}', '{inventory.ProductQuantity}', '{inventory.Category}');";
         }
 
-        public void Test()
+
+        private string QueryizeModify(Inventory inventoryProduct)
         {
-            dbInstance.RunInsertionQuery(QueryizeInsert(new Inventory(0, "ABBOTT Stretcher", 30, InventoryCategory.ICUINSTRUEMENTS)));
+            return $"UPDATE Inventory_Table SET ProductName ='{inventoryProduct.ProductName}', Quantity = {inventoryProduct.ProductQuantity}, Category = {inventoryProduct.Category} WHERE Inventory_ID = {inventoryProduct.InventoryID};";
+
         }
 
+        private string QueryizeDelete(Inventory inventoryProduct)
+        {
+            return $"DELETE FROM Inventory_Table WHERE Inventory_ID = {inventoryProduct.InventoryID};";
+        }
 
         public List<Inventory> GetAllInventoryItems()
         {
