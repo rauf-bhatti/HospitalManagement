@@ -8,14 +8,14 @@ namespace HospitalManagement.Models
 {
     class Inventory
     {
-        public int ProductID { get; set; }
+        public int InventoryID { get; set; }
         public string ProductName { get; set; }
         public int ProductQuantity { get; set; }
         public InventoryCategory Category { get; set; }
 
         public Inventory(int ProductID, string ProductName, int ProductQuantity, InventoryCategory Category)
         {
-            this.ProductID = ProductID;
+            this.InventoryID = ProductID;
             this.ProductName = ProductName;
             this.ProductQuantity = ProductQuantity;
             this.Category = Category;

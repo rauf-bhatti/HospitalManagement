@@ -53,17 +53,19 @@
 
             <StackPanel
                 Orientation="Horizontal"
-                Margin="150, 50, 0, 0">
+                Margin="100, 50, 0, 0">
 
                 <Label 
                     Margin="0, 0, 0, 0"
-                    Content="ID"
+                    Content="Product Name"
+                    HorizontalAlignment="Center"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="25"/>
 
                 <Label 
-                    Margin="250, 0, 0, 0"
-                    Content="Inventory Description/Category"
+                    Margin="200, 0, 0, 0"
+                    Content="Inventory Category"
+                    HorizontalAlignment="Center"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="25"/>
             </StackPanel>
@@ -74,19 +76,39 @@
                 Margin="100, 0, 0, 0">
 
                 <TextBox
-                    x:Name="txtBox_id"
+                    x:Name="txtBox_Title"
                     Margin="0, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="25"
                     Height="50"
                     Width="200"/>
 
-                <TextBox 
-                    x:Name="txtBox_Title"
-                    Margin="180, 0, 0, 0"
+
+
+                <ComboBox
+                    Name="dropdown_InventoryCategory"
+                    Margin="150, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="25"
-                    Width="200"/>
+                    Width="200">
+                    
+                    <ComboBoxItem Content="DENTAL_INSTRUEMENTS"></ComboBoxItem>
+                    <ComboBoxItem Content="SURGICAL_INSTRUEMENTS"></ComboBoxItem>
+                    <ComboBoxItem Content="WHEEL_CHAIR"></ComboBoxItem>
+                    <ComboBoxItem Content="PATIENT_BED"></ComboBoxItem>
+                    <ComboBoxItem Content="ICU_INSTRUEMENTS"></ComboBoxItem>
+                    <ComboBoxItem Content="ICU_BED"></ComboBoxItem>
+                    <ComboBoxItem Content="OPERATION_THEATOR_MACHINE"></ComboBoxItem>
+                    <ComboBoxItem Content="STRETCHER"></ComboBoxItem>
+                    <ComboBoxItem Content="EMERGENCY_WARD_INSTRUEMENTS"></ComboBoxItem>
+
+                   
+                    
+
+                </ComboBox>
+
+
+
             </StackPanel>
 
             <!-- First Name & Last Name Label + TextBox -->
@@ -96,7 +118,7 @@
                 Margin="150, 50, 0, 0">
 
                 <Label 
-                    Margin="175, 0, 0, 0"
+                    Margin="200, 0, 0, 0"
                     Content="Quantity"
                     HorizontalAlignment="Center"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
@@ -112,7 +134,7 @@
 
                 <TextBox 
                     x:Name="txtBox_Quantity"
-                    Margin="175, 0, 0, 0"
+                    Margin="200, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     HorizontalAlignment="Center"
                     FontSize="25"
@@ -136,7 +158,7 @@
                     Content="Submit Inventory"
                     Background="Green"
                     Foreground="White"
-                    Click="Btn_Submit_Click"/>
+                    />
 
         </StackPanel>
     </Grid>

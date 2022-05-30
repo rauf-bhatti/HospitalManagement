@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using HospitalManagement.Controllers;
 
 namespace HospitalManagement.Views
 {
@@ -28,6 +29,11 @@ namespace HospitalManagement.Views
         {
             PatientViews.PatientManagement ptnManagement = new PatientViews.PatientManagement();
             ptnManagement.ShowDialog();
+        }
+
+        private void Btn_ManageInventory_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

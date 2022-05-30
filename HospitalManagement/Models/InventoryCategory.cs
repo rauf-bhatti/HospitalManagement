@@ -8,14 +8,14 @@ namespace HospitalManagement.Models
 {
     enum InventoryCategory
     {
-        DENTALINSTRUEMENTS,
-        SURGICALINSTRUEMENTS,
-        WHEELCHAIR,
-        PATIENTBED,
-        ICUINSTRUEMENTS,
-        ICUBED,
-        OPERATIONTHEATORMACHINE,
+        DENTAL_INSTRUEMENTS,
+        SURGICAL_INSTRUEMENTS,
+        WHEEL_CHAIR,
+        PATIENT_BED,
+        ICU_INSTRUEMENTS,
+        ICU_BED,
+        OPERATION_THEATOR_MACHINE,
         STRETCHER,
-        EMERGENCYWARDINSTRUEMENTS
+        EMERGENCY_WARD_INSTRUEMENTS
     }
 }
