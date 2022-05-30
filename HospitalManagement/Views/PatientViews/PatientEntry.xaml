@@ -73,7 +73,8 @@
                 Orientation="Horizontal"
                 Margin="100, 0, 0, 0">
 
-                <TextBox 
+                <TextBox
+                    x:Name="txtBox_FirstName"
                     Margin="0, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="25"
@@ -81,6 +82,7 @@
                     Width="200"/>
 
                 <TextBox 
+                    x:Name="txtBox_LastName"
                     Margin="180, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="25"
@@ -112,6 +114,7 @@
                 Margin="100, 0, 0, 0">
 
                 <TextBox 
+                    x:Name="txtBox_Age"
                     Margin="0, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="25"
@@ -119,6 +122,7 @@
                     Width="200"/>
 
                 <TextBox 
+                    x:Name="txtBox_Address"
                     Margin="180, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="25"
@@ -129,7 +133,7 @@
             <!-- Submit Button -->
 
             <Button 
-                    x:Name="btn_Submit"
+                    x:Name="Btn_Submit"
                     Margin="0, 100, 0, 0"
                     HorizontalAlignment="Center"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
@@ -138,9 +142,9 @@
                     Height="50"
                     Content="Submit Entry"
                     Background="Green"
-                    Foreground="White"/>
-            
-            
+                    Foreground="White"
+                    Click="Btn_Submit_Click"/>
+
         </StackPanel>
     </Grid>
 </Window>

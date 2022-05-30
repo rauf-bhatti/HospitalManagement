@@ -15,14 +15,24 @@ namespace HospitalManagement.Database
     {
         private NpgsqlConnection connection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["DBConn"].ConnectionString);
 
+        private void ResetConnection()
+        {
+            if (connection.State == ConnectionState.Closed)
+                connection.Open();
+            else
+            {
+                connection.Close();
+                connection.Open();
+            }
+        }
+
 
         public dynamic RunValidationQuery(string query)
         {
             dynamic resultToReturn;
             try
             {
-                if (connection.State == ConnectionState.Closed)
-                    connection.Open();
+                ResetConnection();
 
                 NpgsqlCommand _cmd = new NpgsqlCommand(query, connection);
 
@@ -43,8 +53,7 @@ namespace HospitalManagement.Database
         {
             try
             {
-                if (connection.State == ConnectionState.Closed)
-                    connection.Open();
+                ResetConnection();
 
                 NpgsqlCommand _cmd = new NpgsqlCommand(query, connection);
 
@@ -58,5 +67,25 @@ namespace HospitalManagement.Database
 
         }
 
+        public dynamic RunInsertionQuery(string query)
+        {
+            dynamic resultToReturn;
+            try
+            {
+                ResetConnection();
+
+                NpgsqlCommand _cmd = new NpgsqlCommand(query, connection);
+
+                resultToReturn = _cmd.ExecuteNonQuery();
+
+                connection.Close();
+                return resultToReturn;
+            }
+            catch (NpgsqlException e)
+            {
+                connection.Close();
+                return e.ErrorCode;
+            }
+        }
     }
 }

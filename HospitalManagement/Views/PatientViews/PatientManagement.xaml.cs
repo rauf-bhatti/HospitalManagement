@@ -37,6 +37,7 @@ namespace HospitalManagement.Views.PatientViews
         {
             PatientEntry PatientEntryForm = new PatientEntry();
             PatientEntryForm.ShowDialog();
+            BindData();
         }
     }
 }
