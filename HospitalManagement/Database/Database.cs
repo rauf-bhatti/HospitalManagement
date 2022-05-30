@@ -49,6 +49,52 @@ namespace HospitalManagement.Database
 
         }
 
+        public dynamic RunModificationQuery(string query)
+        {
+            dynamic resultToReturn;
+            try
+            {
+                ResetConnection();
+
+                NpgsqlCommand _cmd = new NpgsqlCommand(query, connection);
+
+                resultToReturn = _cmd.ExecuteNonQuery();
+
+                connection.Close();
+                return resultToReturn;
+            }
+            catch (NpgsqlException e)
+            {
+                connection.Close();
+                return e.ErrorCode;
+            }
+
+        }
+
+
+        public dynamic RunDeletionQuery(string query)
+        {
+            dynamic resultToReturn;
+            try
+            {
+                ResetConnection();
+
+                NpgsqlCommand _cmd = new NpgsqlCommand(query, connection);
+
+                resultToReturn = _cmd.ExecuteNonQuery();
+
+                connection.Close();
+                return resultToReturn;
+            }
+            catch (NpgsqlException e)
+            {
+                connection.Close();
+                return e.ErrorCode;
+            }
+
+        }
+
+
         public dynamic RunReceiveQuery(string query, int flag) //Flag is set if the query is expected to return any value. Flag = 1 incase result expected, Flag = 0 if not.
         {
             try
