@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement.Models
 {
-    enum Diagnosis
+    public enum Diagnosis
     {
         CARDIAC,
         NEURO,
