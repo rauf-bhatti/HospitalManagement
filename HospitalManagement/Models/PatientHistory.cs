@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement.Models
 {
-    public class PatientHistory
+    class PatientHistory
     {
         public Diagnosis MainDiagnosis { get; set; }
         public string Report { get; set; }

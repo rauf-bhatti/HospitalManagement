@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement.Models
 {
-    public class Patient : Person
+    class Patient : Person
     {
         public List<PatientHistory> PatientHistory = new List<PatientHistory>();
 
