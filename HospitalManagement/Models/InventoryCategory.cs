@@ -17,7 +17,5 @@ namespace HospitalManagement.Models
         OPERATIONTHEATORMACHINE,
         STRETCHER,
         EMERGENCYWARDINSTRUEMENTS
-
-
     }
 }
