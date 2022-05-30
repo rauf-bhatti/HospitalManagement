@@ -69,7 +69,8 @@
             Grid.ColumnSpan="7"
             Grid.RowSpan="5"
             FontFamily="Bahnschrift SemiBold SemiCondensed" 
-            Background="FloralWhite">
+            Background="FloralWhite"
+            MouseDoubleClick="listView_Main_MouseDoubleClick">
             <ListView.View>
                 <GridView 
                     AllowsColumnReorder="False">

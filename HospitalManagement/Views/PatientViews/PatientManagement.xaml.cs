@@ -39,5 +39,13 @@ namespace HospitalManagement.Views.PatientViews
             PatientEntryForm.ShowDialog();
             BindData();
         }
+
+        private void listView_Main_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            int selectedIndex = listView_Main.SelectedIndex;
+            DisplayPatient displayPatient = new DisplayPatient(controller.GetAllPatients()[selectedIndex]);
+            displayPatient.ShowDialog();
+            BindData();
+        }
     }
 }
