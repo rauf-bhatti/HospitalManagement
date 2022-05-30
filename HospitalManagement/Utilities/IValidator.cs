@@ -8,7 +8,7 @@ namespace HospitalManagement.Utilities
 {
     interface IValidator
     {
-        public bool ValidateDataLength(string dataString, int length);
+        public bool ValidateDataLength(string dataString, int lowerBound, int upperBound);
         public bool ValidateData(string dataString);
     }
 }

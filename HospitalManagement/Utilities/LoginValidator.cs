@@ -10,12 +10,19 @@ namespace HospitalManagement.Utilities
     {
         public bool ValidateData(string dataString)
         {
-            throw new NotImplementedException();
+            //Custom Implementation
+            return dataString.Any(char.IsDigit); //Check if atleast one character contains a number
         }
 
-        public bool ValidateDataLength(string dataString, int length)
+        public bool ValidateDataLength(string dataString, int lowerBound, int upperBound)
         {
-            throw new NotImplementedException();
+            if (dataString.Length <= 0 || dataString.Length < lowerBound) //Empty check is common to all login data that needs to be validated.
+                return false;
+
+            if (dataString.Length >= upperBound)
+                return false;
+
+            return true;
         }
     }
 }

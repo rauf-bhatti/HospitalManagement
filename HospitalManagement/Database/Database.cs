@@ -15,24 +15,44 @@ namespace HospitalManagement.Database
     {
         private NpgsqlConnection connection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["DBConn"].ConnectionString);
 
-        public dynamic RunQuery(string query, int flag) //Flag is set if the query is expected to return any value. Flag = 1 incase result expected, Flag = 0 if not.
+
+        public dynamic RunValidationQuery(string query)
         {
+            dynamic resultToReturn;
             try
             {
-                connection.Open();
+                if (connection.State == ConnectionState.Closed)
+                    connection.Open();
+
                 NpgsqlCommand _cmd = new NpgsqlCommand(query, connection);
 
-                if (flag == 1)
-                {
-                    return _cmd.ExecuteReader();
-                }
-                else
-                {
-                    return _cmd.ExecuteNonQuery();
-                }
+                resultToReturn = _cmd.ExecuteScalar();
+
+                connection.Close();
+                return resultToReturn;
             }
             catch (NpgsqlException e)
             {
+                connection.Close();
+                return e.ErrorCode;
+            }
+
+        }
+
+        public dynamic RunReceiveQuery(string query, int flag) //Flag is set if the query is expected to return any value. Flag = 1 incase result expected, Flag = 0 if not.
+        {
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                    connection.Open();
+
+                NpgsqlCommand _cmd = new NpgsqlCommand(query, connection);
+
+                return _cmd.ExecuteReader();
+            }
+            catch (NpgsqlException e)
+            {
+                connection.Close();
                 return e.ErrorCode;
             }
 

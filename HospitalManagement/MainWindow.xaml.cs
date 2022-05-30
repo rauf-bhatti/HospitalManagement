@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HospitalManagement.Views;
+using HospitalManagement.Controllers;
 
 namespace HospitalManagement
 {
@@ -21,6 +22,8 @@ namespace HospitalManagement
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainController mainController = new MainController();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,9 +31,17 @@ namespace HospitalManagement
 
         private void Btn_Login_Click(object sender, RoutedEventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-            this.Hide();
-            dashboard.ShowDialog();
+            
+            if (mainController.ValidateLogin(txtBox_username.Text, txtBox_password.Password))
+            {
+                Dashboard dashboard = new Dashboard();
+                this.Hide();
+                dashboard.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("[Login Error] Wrong Username/Password");
+            }
         }
     }
 }
