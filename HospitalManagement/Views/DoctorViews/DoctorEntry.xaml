@@ -161,12 +161,33 @@
                     Height="45"
                     Width="200"/>
 
-                <TextBox 
+                
+
+                <ComboBox
+                    Name="dropdown_Specialization"
                     Margin="180, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="20"
                     Height="45"
-                    Width="200"/>
+                    Width="200">
+
+                    <ComboBoxItem Content="CARDIO"></ComboBoxItem>
+                    <ComboBoxItem Content="NEURO"></ComboBoxItem>
+                    <ComboBoxItem Content="GENERALPHYSICIAN"></ComboBoxItem>
+                    <ComboBoxItem Content="PEDES"></ComboBoxItem>
+                    <ComboBoxItem Content="ONCOLOGY"></ComboBoxItem>
+                    <ComboBoxItem Content="OBGYN"></ComboBoxItem>
+                    <ComboBoxItem Content="OTHER"></ComboBoxItem>
+
+                  
+                    
+
+
+                </ComboBox>
+
+
+
+
             </StackPanel>
 
             <!-- Submit Button -->
