@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement.Models
 {
-    enum Specialization
+    public enum Specialization
     {
         CARDIO,
         NEURO,

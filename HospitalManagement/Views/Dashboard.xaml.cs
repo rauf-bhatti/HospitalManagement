@@ -35,5 +35,11 @@ namespace HospitalManagement.Views
         {
             
         }
+
+        private void Btn_ManagePhysicians_Click(object sender, RoutedEventArgs e)
+        {
+            DoctorViews.DoctorManagement docManagement = new DoctorViews.DoctorManagement();
+            docManagement.ShowDialog();
+        }
     }
 }

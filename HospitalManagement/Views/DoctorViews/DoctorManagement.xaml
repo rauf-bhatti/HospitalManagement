@@ -5,8 +5,85 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HospitalManagement.Views.DoctorViews"
         mc:Ignorable="d"
-        Title="DoctorManagement" Height="450" Width="800">
+        Title="DoctorManagement" Height="600" Width="1000">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="9"
+            Background="Navy">
+
+            <Label 
+                Content="Physician Management"
+                FontFamily="Bahnschrift SemiBold SemiCondensed"
+                FontSize="35"
+                Foreground="White"
+                Margin="130, 15, 0, 0"/>
+        </Border>
+
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Background="SlateGray"
+            Grid.RowSpan="5">
+
+            <StackPanel>
+                <Button
+                    x:Name="Btn_AddPatient"
+                    Margin="0, 50, 0, 0"
+                    Width="100"
+                    Background="SlateGray"
+                    BorderBrush="Black"
+                    BorderThickness="1">
+                    <Image Source="/assets/login-logo.png" Width="50" Height="80"/>
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <ScrollViewer 
+            HorizontalScrollBarVisibility="Auto"
+            x:Name="listView_Main"
+            Grid.Column="2"
+            Grid.Row="1"
+            Grid.ColumnSpan="7"
+            Grid.RowSpan="5"
+            FontFamily="Bahnschrift SemiBold SemiCondensed" 
+            Background="FloralWhite">
+            <ListView>
+                <ListView.View>
+                    <GridView 
+                    AllowsColumnReorder="False">
+                        <GridViewColumn Header = "ID Number" DisplayMemberBinding = "{Binding ID_Number}" Width = "150"/>
+                        <GridViewColumn Header = "First Name" DisplayMemberBinding = "{Binding FirstName}" Width = "150"/>
+                        <GridViewColumn Header = "Last Name" DisplayMemberBinding = "{Binding LastName}" Width = "150"/>
+                        <GridViewColumn Header = "Age" DisplayMemberBinding = "{Binding Age}" Width = "150"/>
+                        <GridViewColumn Header = "Address" DisplayMemberBinding = "{Binding Address}" Width = "150"/>
+                        <GridViewColumn Header = "Specialization" DisplayMemberBinding = "{Binding Address}" Width = "150"/>
+                        <GridViewColumn Header = "Salary" DisplayMemberBinding = "{Binding Address}" Width = "150"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
     </Grid>
 </Window>
