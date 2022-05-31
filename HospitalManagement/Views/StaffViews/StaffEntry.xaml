@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HospitalManagement.Views.StaffViews"
         mc:Ignorable="d"
-        Title="StaffEntry" Height="6000" Width="800">
+        Title="StaffEntry" Height="600" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -161,12 +161,29 @@
                     Height="45"
                     Width="200"/>
 
-                <TextBox 
+               
+
+                <ComboBox
+                    Name="dropdown_InventoryCategory"
                     Margin="180, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="20"
                     Height="45"
-                    Width="200"/>
+                    Width="200">
+
+                    <ComboBoxItem Content="JANITOR"></ComboBoxItem>
+                    <ComboBoxItem Content="RECEPTIONIST"></ComboBoxItem>
+                    <ComboBoxItem Content="MANAGER"></ComboBoxItem>
+                    <ComboBoxItem Content="NURSE"></ComboBoxItem>
+                    <ComboBoxItem Content="WARD_BOY"></ComboBoxItem>
+                    <ComboBoxItem Content="SECURITY_GUARD"></ComboBoxItem>
+                    <ComboBoxItem Content="ADMIN"></ComboBoxItem>
+                   
+                   
+
+
+                </ComboBox>
+
             </StackPanel>
 
             <!-- Submit Button -->
