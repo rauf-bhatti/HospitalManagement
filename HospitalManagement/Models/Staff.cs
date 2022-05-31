@@ -10,11 +10,13 @@ namespace HospitalManagement.Models
     {
         
         string Designation { get; set; }
+        int Salary { get; set; }
 
-        public Staff(int ID_Number, string FirstName, string LastName, int Age, string Address, string Designation)
+        public Staff(int ID_Number, string FirstName, string LastName, int Age, string Address, string Designation, int Salary)
             : base(ID_Number, FirstName, LastName, Age, Address)
         {
             this.Designation = Designation;
+            this.Salary = Salary;
         }
 
       
