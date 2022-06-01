@@ -43,6 +43,7 @@ namespace HospitalManagement.Views.PatientViews
         {
             AddPatientHistory addPatientHistoryWindow = new AddPatientHistory(patientID, patientName);
             addPatientHistoryWindow.ShowDialog();
+            BindData();
         }
     }
 }
