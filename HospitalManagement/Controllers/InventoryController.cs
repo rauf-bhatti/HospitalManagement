@@ -8,10 +8,9 @@ using HospitalManagement.Utilities;
 
 namespace HospitalManagement.Controllers
 {
-    class InventoryController
+    class InventoryController : Controller
     {
         private InventoryValidator inventoryValidator = new InventoryValidator();
-        private HospitalManagement.Database.Database dbInstance = new HospitalManagement.Database.Database();
         private readonly string inventory_get_query = "SELECT * FROM Inventory_Table";
 
 

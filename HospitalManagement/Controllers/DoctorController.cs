@@ -9,10 +9,9 @@ using HospitalManagement.Models;
 
 namespace HospitalManagement.Controllers
 {
-    class DoctorController
+    class DoctorController : Controller
     {
         private DoctorValidator doctorValidator = new DoctorValidator();
-        private HospitalManagement.Database.Database dbInstance = new HospitalManagement.Database.Database();
         private readonly string doctor_get_query = "SELECT * FROM Doctor_Table";
 
         private string QueryizeInsert(Doctor newDoctor)

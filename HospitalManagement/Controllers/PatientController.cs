@@ -10,10 +10,9 @@ using System.Data;
 
 namespace HospitalManagement.Controllers
 {
-    class PatientController
+    class PatientController : Controller
     {
         private PatientValidator patientValidator = new PatientValidator();
-        private HospitalManagement.Database.Database dbInstance = new HospitalManagement.Database.Database();
         private readonly string patient_get_query = "SELECT * FROM Patient";
 
         private string QueryizeInsert(Patient newPatient)

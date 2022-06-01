@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HospitalManagement.Database;
+using HospitalManagement.Utilities;
 
 namespace HospitalManagement.Controllers
 {

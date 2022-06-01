@@ -9,10 +9,9 @@ using HospitalManagement.Utilities;
 
 namespace HospitalManagement.Controllers
 {
-    class MainController
+    class MainController : Controller
     {
         private LoginValidator loginValidator = new LoginValidator();
-        private Database.Database database = new Database.Database();
 
         private string QueryizeInsert(string username, string password)
         {
@@ -39,7 +38,7 @@ namespace HospitalManagement.Controllers
 
         public bool ValidateLogin(string username, string password)
         {
-            return database.RunValidationQuery(QueryizeGet(username, password)) != null ? true : false;
+            return dbInstance.RunValidationQuery(QueryizeGet(username, password)) != null ? true : false;
         }
     }
 }

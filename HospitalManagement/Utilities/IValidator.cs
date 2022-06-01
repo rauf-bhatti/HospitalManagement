@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement.Utilities
 {
-    interface IValidator
+    public interface IValidator
     {
         public bool ValidateDataLength(string dataString, int lowerBound, int upperBound);
         public bool ValidateData(string dataString);
