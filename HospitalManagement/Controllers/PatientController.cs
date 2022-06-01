@@ -65,7 +65,7 @@ namespace HospitalManagement.Controllers
         {
             if (patientValidator.ValidateDataLength(newPatient.FirstName, 3, 25) &&
                 patientValidator.ValidateDataLength(newPatient.LastName, 3, 25) &&
-                patientValidator.ValidateDataLength(newPatient.Address, 3, 25) &&
+                patientValidator.ValidateDataLength(newPatient.Address, 3, 100) &&
                 patientValidator.ValidateData(newPatient.FirstName) &&
                 patientValidator.ValidateData(newPatient.LastName) &&
                 newPatient.Age > 0 && newPatient.Age < 100)
