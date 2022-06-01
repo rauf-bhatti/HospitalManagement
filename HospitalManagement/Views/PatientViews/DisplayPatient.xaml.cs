@@ -63,5 +63,11 @@ namespace HospitalManagement.Views.PatientViews
                 MessageBox.Show($"[Error] Information for patient no. PT{patient.ID_Number} could not be modified.");
             }
         }
+
+        private void Btn_PatientHistory_Click(object sender, RoutedEventArgs e)
+        {
+            PatientHistory patientHistoryWindow = new PatientHistory(patient.ID_Number, new string(patient.FirstName + " " + patient.LastName));
+            patientHistoryWindow.ShowDialog();
+        }
     }
 }
