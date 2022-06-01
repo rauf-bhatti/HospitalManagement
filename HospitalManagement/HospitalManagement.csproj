@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\StaffViews\**" />
+    <EmbeddedResource Remove="Views\StaffViews\**" />
+    <None Remove="Views\StaffViews\**" />
+    <Page Remove="Views\StaffViews\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="assets\login-logo.png" />
     <None Remove="assets\logo.png" />
     <None Remove="assets\profile-photo.png" />

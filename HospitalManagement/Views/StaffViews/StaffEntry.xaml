@@ -178,10 +178,6 @@
                     <ComboBoxItem Content="WARD_BOY"></ComboBoxItem>
                     <ComboBoxItem Content="SECURITY_GUARD"></ComboBoxItem>
                     <ComboBoxItem Content="ADMIN"></ComboBoxItem>
-                   
-                   
-
-
                 </ComboBox>
 
             </StackPanel>
