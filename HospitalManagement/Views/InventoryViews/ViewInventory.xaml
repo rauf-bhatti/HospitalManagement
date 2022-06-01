@@ -41,11 +41,6 @@
                 Margin="130, 15, 0, 0"/>
         </Border>
 
-       
-      
-
-
-
         <StackPanel
                 Grid.Row="1"
                 Grid.Column="0"
@@ -56,90 +51,60 @@
             <!-- First Name & Last Name Label + TextBox -->
 
             <StackPanel
-                Orientation="Horizontal"
-                Margin="150, 30, 0, 0">
+                Orientation="Vertical"
+                Margin="0, 30, 0, 0"
+                HorizontalAlignment="Center">
 
                 <Label 
-                    Margin="0, 0, 0, 0"
-                    Content="First Name"
+                    Content="Product Name"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
-                    FontSize="20"/>
-
-                
-            </StackPanel>
-
-
-            <StackPanel
-                Orientation="Horizontal"
-                Margin="100, 0, 0, 0">
+                    FontSize="20"
+                    HorizontalAlignment="Center"/>
 
                 <TextBox
-                    x:Name="txtBox_FirstName"
-                    Margin="0, 0, 0, 0"
+                    x:Name="txtBox_ProductName"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="20"
                     Height="40"
                     Width="200"/>
 
-               
-            </StackPanel>
-
-            <!-- Age & Address Label + TextBox -->
-
-            <StackPanel
-                Orientation="Horizontal"
-                Margin="150, 30, 0, 0">
-
                 <Label 
-                    Margin="30, 0, 0, 0"
-                    Content="Age"
+                    HorizontalAlignment="Center"
+                    Content="Quantity"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="20"/>
 
-               
-            </StackPanel>
-
-            <StackPanel
-                Orientation="Horizontal"
-                Margin="100, 0, 0, 0">
-
                 <TextBox 
-                    x:Name="txtBox_Age"
-                    Margin="0, 0, 0, 0"
+                    x:Name="txtBox_Quantity"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="20"
                     Height="40"
-                    Width="200"/>
-            </StackPanel>
-
-                <StackPanel
-                Orientation="Horizontal"
-                Margin="100, 30, 0, 0">
-
-               
+                    Width="200"
+                    HorizontalAlignment="Center"/>
 
                 <Label 
-                    Margin="60, 0, 0, 0"
-                    Content="Address"
+                    Content="Category"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
+                    HorizontalAlignment="Center"
                     FontSize="20"/>
-            </StackPanel>
 
-
-
-            <StackPanel
-                Orientation="Horizontal"
-                Margin="100, 0, 0, 0">
-
-               
-
-                <TextBox 
-                    x:Name="txtBox_Address"
-                    Margin="0, 0, 0, 0"
+                <ComboBox 
+                    x:Name="cBox_Category"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="20"
                     Height="40"
-                    Width="200"/>
+                    Width="200"
+                    HorizontalAlignment="Center">
+
+                    <ComboBoxItem Content="DENTAL_INSTRUMENTS"></ComboBoxItem>
+                    <ComboBoxItem Content="SURGICAL_INSTRUMENTS"></ComboBoxItem>
+                    <ComboBoxItem Content="WHEEL_CHAIR"></ComboBoxItem>
+                    <ComboBoxItem Content="PATIENT_BED"></ComboBoxItem>
+                    <ComboBoxItem Content="ICU_BED"></ComboBoxItem>
+                    <ComboBoxItem Content="OPERATION_THEATOR_MACHINE"></ComboBoxItem>
+                    <ComboBoxItem Content="STRETCHER"></ComboBoxItem>
+                    <ComboBoxItem Content="EMERGENCY_WARD_INSTRUMENTS"></ComboBoxItem>
+                </ComboBox>
             </StackPanel>
 
 
@@ -159,7 +124,7 @@
                     Content="Modify Entry"
                     Background="Orange"
                     Foreground="White"
-                    />
+                    Click="Btn_Modify_Click"/>
 
                 <Button 
                     x:Name="Btn_Delete"
@@ -172,7 +137,7 @@
                     Content="Delete"
                     Background="Red"
                     Foreground="White"
-                    />
+                    Click="Btn_Delete_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

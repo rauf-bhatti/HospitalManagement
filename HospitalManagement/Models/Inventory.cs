@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement.Models
 {
-    class Inventory
+    public class Inventory
     {
         public int InventoryID { get; set; }
         public string ProductName { get; set; }
         public int ProductQuantity { get; set; }
         public InventoryCategory Category { get; set; }
 
-        public Inventory(int ProductID, string ProductName, int ProductQuantity, InventoryCategory Category)
+        public Inventory(int InventoryID, string ProductName, int ProductQuantity, InventoryCategory Category)
         {
-            this.InventoryID = ProductID;
+            this.InventoryID = InventoryID;
             this.ProductName = ProductName;
             this.ProductQuantity = ProductQuantity;
             this.Category = Category;
-
         }
 
     }

@@ -11,7 +11,7 @@ using Npgsql;
 
 namespace HospitalManagement.Database
 {
-    class Database
+    public class Database
     {
         private NpgsqlConnection connection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["DBConn"].ConnectionString);
 

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement.Models
 {
-    enum InventoryCategory
+    public enum InventoryCategory
     {
-        DENTAL_INSTRUEMENTS,
-        SURGICAL_INSTRUEMENTS,
+        DENTAL_INSTRUMENTS,
+        SURGICAL_INSTRUMENTS,
         WHEEL_CHAIR,
         PATIENT_BED,
-        ICU_INSTRUEMENTS,
+        ICU_INSTRUMENTS,
         ICU_BED,
         OPERATION_THEATOR_MACHINE,
         STRETCHER,
-        EMERGENCY_WARD_INSTRUEMENTS
+        EMERGENCY_WARD_INSTRUMENTS
     }
 }

@@ -52,9 +52,28 @@ namespace HospitalManagement.Controllers
             if (inventoryValidator.ValidateDataLength(newInventory.ProductName, 4, 50) &&
                 newInventory.ProductQuantity > 0 && newInventory.ProductQuantity < 99) 
             {
+                dbInstance.RunInsertionQuery(QueryizeInsert(newInventory));
                 return true;
             }
 
+            return false;
+        }
+
+        public bool ModifyInventoryEntry(Inventory inventory)
+        {
+            if (inventoryValidator.ValidateDataLength(inventory.ProductName, 4, 50) &&
+                inventory.ProductQuantity > 0 && inventory.ProductQuantity < 99)
+            {
+                dbInstance.RunModificationQuery(QueryizeModify(inventory));
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool DeleteInventoryEntry(Inventory inventory)
+        {
+            dbInstance.RunDeletionQuery(QueryizeDelete(inventory));
             return true;
         }
     }

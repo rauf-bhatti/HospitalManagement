@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using HospitalManagement.Controllers;
 
 namespace HospitalManagement.Views.InventoryViews
 {
@@ -19,9 +20,33 @@ namespace HospitalManagement.Views.InventoryViews
     /// </summary>
     public partial class InventoryManagement : Window
     {
+        private InventoryController inventoryController = new InventoryController();
+
         public InventoryManagement()
         {
             InitializeComponent();
+            BindData();
+        }
+
+        private void BindData()
+        {
+            this.listView_Main.ItemsSource = inventoryController.GetAllInventoryItems();
+        }
+
+        private void Btn_AddInventory_Click(object sender, RoutedEventArgs e)
+        {
+            InventoryEntry inventoryEntryForm = new InventoryEntry();
+            inventoryEntryForm.ShowDialog();
+            BindData();
+        }
+
+        private void listView_Main_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            int selectedIndex = listView_Main.SelectedIndex;
+            ViewInventory viewInventory = new ViewInventory(inventoryController.GetAllInventoryItems()[selectedIndex]);
+            viewInventory.ShowDialog();
+            BindData();
+
         }
     }
 }

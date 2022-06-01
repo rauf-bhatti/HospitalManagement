@@ -86,29 +86,21 @@
 
 
                 <ComboBox
-                    Name="dropdown_InventoryCategory"
+                    Name="cBox_Category"
                     Margin="150, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="25"
                     Width="200">
-                    
-                    <ComboBoxItem Content="DENTAL_INSTRUEMENTS"></ComboBoxItem>
-                    <ComboBoxItem Content="SURGICAL_INSTRUEMENTS"></ComboBoxItem>
+
+                    <ComboBoxItem Content="DENTAL_INSTRUMENTS"></ComboBoxItem>
+                    <ComboBoxItem Content="SURGICAL_INSTRUMENTS"></ComboBoxItem>
                     <ComboBoxItem Content="WHEEL_CHAIR"></ComboBoxItem>
                     <ComboBoxItem Content="PATIENT_BED"></ComboBoxItem>
-                    <ComboBoxItem Content="ICU_INSTRUEMENTS"></ComboBoxItem>
                     <ComboBoxItem Content="ICU_BED"></ComboBoxItem>
                     <ComboBoxItem Content="OPERATION_THEATOR_MACHINE"></ComboBoxItem>
                     <ComboBoxItem Content="STRETCHER"></ComboBoxItem>
-                    <ComboBoxItem Content="EMERGENCY_WARD_INSTRUEMENTS"></ComboBoxItem>
-
-                   
-                    
-
+                    <ComboBoxItem Content="EMERGENCY_WARD_INSTRUMENTS"></ComboBoxItem>
                 </ComboBox>
-
-
-
             </StackPanel>
 
             <!-- First Name & Last Name Label + TextBox -->

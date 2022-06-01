@@ -33,7 +33,8 @@ namespace HospitalManagement.Views
 
         private void Btn_ManageInventory_Click(object sender, RoutedEventArgs e)
         {
-            
+            InventoryViews.InventoryManagement invManagement = new InventoryViews.InventoryManagement();
+            invManagement.ShowDialog();
         }
 
         private void Btn_ManagePhysicians_Click(object sender, RoutedEventArgs e)
