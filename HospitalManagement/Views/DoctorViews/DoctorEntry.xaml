@@ -155,16 +155,17 @@
                 Margin="100, 0, 0, 0">
 
                 <TextBox 
+                    x:Name="txtBox_Salary"
                     Margin="0, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="20"
                     Height="45"
                     Width="200"/>
 
-                
+
 
                 <ComboBox
-                    Name="dropdown_Specialization"
+                    x:Name="cBox_Specialization"
                     Margin="180, 0, 0, 0"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="20"
@@ -178,16 +179,7 @@
                     <ComboBoxItem Content="ONCOLOGY"></ComboBoxItem>
                     <ComboBoxItem Content="OBGYN"></ComboBoxItem>
                     <ComboBoxItem Content="OTHER"></ComboBoxItem>
-
-                  
-                    
-
-
                 </ComboBox>
-
-
-
-
             </StackPanel>
 
             <!-- Submit Button -->
@@ -202,7 +194,8 @@
                     Height="50"
                     Content="Submit Entry"
                     Background="Green"
-                    Foreground="White"/>
+                    Foreground="White"
+                    Click="Btn_Submit_Click"/>
 
         </StackPanel>
     </Grid>

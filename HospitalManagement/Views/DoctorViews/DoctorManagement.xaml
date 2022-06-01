@@ -50,12 +50,13 @@
 
             <StackPanel>
                 <Button
-                    x:Name="Btn_AddPatient"
+                    x:Name="Btn_AddPhysician"
                     Margin="0, 50, 0, 0"
                     Width="100"
                     Background="SlateGray"
                     BorderBrush="Black"
-                    BorderThickness="1">
+                    BorderThickness="1"
+                    Click="Btn_AddPhysician_Click">
                     <Image Source="/assets/login-logo.png" Width="50" Height="80"/>
                 </Button>
             </StackPanel>
@@ -63,14 +64,14 @@
 
         <ScrollViewer 
             HorizontalScrollBarVisibility="Auto"
-            x:Name="listView_Main"
             Grid.Column="2"
             Grid.Row="1"
             Grid.ColumnSpan="7"
-            Grid.RowSpan="5"
-            FontFamily="Bahnschrift SemiBold SemiCondensed" 
-            Background="FloralWhite">
-            <ListView>
+            Grid.RowSpan="5">
+            <ListView
+                x:Name="listView_Main"
+                FontFamily="Bahnschrift SemiBold SemiCondensed" 
+                Background="FloralWhite">
                 <ListView.View>
                     <GridView 
                     AllowsColumnReorder="False">
@@ -79,8 +80,8 @@
                         <GridViewColumn Header = "Last Name" DisplayMemberBinding = "{Binding LastName}" Width = "150"/>
                         <GridViewColumn Header = "Age" DisplayMemberBinding = "{Binding Age}" Width = "150"/>
                         <GridViewColumn Header = "Address" DisplayMemberBinding = "{Binding Address}" Width = "150"/>
-                        <GridViewColumn Header = "Specialization" DisplayMemberBinding = "{Binding Address}" Width = "150"/>
-                        <GridViewColumn Header = "Salary" DisplayMemberBinding = "{Binding Address}" Width = "150"/>
+                        <GridViewColumn Header = "Specialization" DisplayMemberBinding = "{Binding Specialization}" Width = "150"/>
+                        <GridViewColumn Header = "Salary" DisplayMemberBinding = "{Binding Salary}" Width = "150"/>
                     </GridView>
                 </ListView.View>
             </ListView>
