@@ -62,6 +62,7 @@ namespace HospitalManagement.Views.PatientViews
                 if (patientHistoryController.InsertPatientHistory(new Models.PatientHistory(0, diagnosis, txtBox_Report.Text, txtBox_Notes.Text, attendingDoctor.Content.ToString(), date_EntryDate.SelectedDate.Value, patientID), patientID))
                 {
                     MessageBox.Show($"[Success] Patient History for patient with ID {patientID} was added");
+                    this.Close();
                 }
                 else
                 {

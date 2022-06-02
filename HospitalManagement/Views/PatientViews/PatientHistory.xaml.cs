@@ -36,7 +36,7 @@ namespace HospitalManagement.Views.PatientViews
 
         private void BindData()
         {
-            patientHistoryController.GetAllPatientHistory(patientID);
+            listView_Main.ItemsSource = patientHistoryController.GetAllPatientHistory(patientID);
         }
 
         private void Btn_AddHistory_Click(object sender, RoutedEventArgs e)

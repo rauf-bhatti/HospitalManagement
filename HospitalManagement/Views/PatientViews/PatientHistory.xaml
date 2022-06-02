@@ -41,26 +41,31 @@
                 Margin="130, 15, 0, 0"/>
         </Border>
 
-        <ListView
-            x:Name="listView_Main"
-            Margin="30, 10, 30, 0"
+        <ScrollViewer 
+            HorizontalScrollBarVisibility="Auto"
             Grid.Column="0"
             Grid.Row="1"
             Grid.ColumnSpan="9"
             Grid.RowSpan="3"
-            FontFamily="Bahnschrift SemiBold SemiCondensed" 
-            Background="FloralWhite">
-            <ListView.View>
-                <GridView 
+            Margin="30, 10, 30, 0">
+            <ListView
+                x:Name="listView_Main"
+                FontFamily="Bahnschrift SemiBold SemiCondensed" 
+                Background="FloralWhite">
+                <ListView.View>
+                    <GridView 
                     AllowsColumnReorder="False">
-                    <GridViewColumn Header = "Entry No." DisplayMemberBinding = "{Binding ID_Number}" Width = "150"/>
-                    <GridViewColumn Header = "First Name" DisplayMemberBinding = "{Binding FirstName}" Width = "150"/>
-                    <GridViewColumn Header = "Last Name" DisplayMemberBinding = "{Binding LastName}" Width = "150"/>
-                    <GridViewColumn Header = "Age" DisplayMemberBinding = "{Binding Age}" Width = "150"/>
-                    <GridViewColumn Header = "Address" DisplayMemberBinding = "{Binding Address}" Width = "150"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+                        <GridViewColumn Header = "Entry No." DisplayMemberBinding = "{Binding EntryNo}" Width = "150"/>
+                        <GridViewColumn Header = "Patient No." DisplayMemberBinding = "{Binding PatientID}" Width = "150"/>
+                        <GridViewColumn Header = "Entry Date" DisplayMemberBinding = "{Binding EntryDate}" Width = "150"/>
+                        <GridViewColumn Header = "Main Diagnosis" DisplayMemberBinding = "{Binding MainDiagnosis}" Width = "150"/>
+                        <GridViewColumn Header = "Report" DisplayMemberBinding = "{Binding Report}" Width = "150"/>
+                        <GridViewColumn Header = "Notes" DisplayMemberBinding = "{Binding Notes}" Width = "150"/>
+                        <GridViewColumn Header = "Attending Doctor" DisplayMemberBinding = "{Binding AttendingDoctor}" Width = "150"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
 
         <Button
             x:Name="Btn_AddHistory"

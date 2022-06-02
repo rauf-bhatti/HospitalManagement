@@ -34,8 +34,15 @@ namespace HospitalManagement.Controllers
 
         public bool InsertPatientHistory(PatientHistory newHistory, int patientID)
         {
-            dbInstance.RunInsertionQuery(QueryizeInsert(newHistory, patientID));
-            return true;
+
+            if (dbInstance.RunInsertionQuery(QueryizeInsert(newHistory, patientID)) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
